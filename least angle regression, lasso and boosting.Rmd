@@ -2,19 +2,16 @@
 title: "Least Angle Regression, Lasso and Boosting"
 author: "Binyi Jing"
 date: '2017-03-24'
-output: 
+output:
   beamer_presentation:
-    #incremental: true
-    fig_width: 7
+    colortheme: dolphin
+    fig_caption: yes
     fig_height: 6
-    fig_caption: true
-  header-includes:
-    - \usepackage{relsize}
+    fig_width: 7
+    theme: Madrid
+  header-includes: \usepackage{relsize}
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 ## Outline
 
@@ -49,7 +46,7 @@ Traditionally, *forward stepwise variable selection* is used to overcome some di
 
 ## Geometrical interpretation of Least Square
 
-![](pic1.png)
+![](picture/pic1.png)
 
 
 ## Lasso vs. Ridge
@@ -80,7 +77,7 @@ Ridge regression always has closed-form solution $\beta = (x^Tx+\lambda I)^{-1}x
 Prof. Bradley Efron
 
 \begin{figure}
- \includegraphics[width=300pt, height = 125 pt]{pic2.png}
+ \includegraphics[width=300pt, height = 125 pt]{picture/pic2.png}
 \end{figure}
 
 
@@ -93,7 +90,7 @@ his inventing of the bootstrapping methodology)
 
 ## Least Angle Regression (LAR) (Efron, 2004)
 
-![Geometric interpretation of LAR](pic3.png)
+![Geometric interpretation of LAR](picture/pic3.png)
 
 
 ## Least Angle Regression (LAR)
@@ -114,7 +111,7 @@ until some other competitor $x_l$ has as much correlation with the current resid
 ## Diabetes Data: Lasso and LAR
 
 
-![Diabetes Data: Lasso and LAR. They are very similar.](pic4.png)
+![Diabetes Data: Lasso and LAR. They are very similar.](picture/pic4.png)
 
 
 ## Why are Lasso and LAR so similar?
@@ -178,7 +175,7 @@ positive at any time.
 
 ## Diabetes Data: Lasso and LAR (revisited) 
 
-![](pic5.png)
+![](picture/pic5.png)
 
 
 ## The characteristic of the Lasso path
@@ -266,7 +263,7 @@ Algorithm
 ## What is Boosting doing?
 
 \begin{figure}
- \includegraphics[width=300pt, height = 125pt]{pic6.png}
+ \includegraphics[width=300pt, height = 125pt]{picture/pic6.png}
  \caption{Figure: An illustration of Boosting based on LAR}
 \end{figure}
 
@@ -361,33 +358,33 @@ From another perspective,
 ## What are their performances ?
 
 
-![For low dimensional problems, their performances are almost the same (e.g., Diabetes data). How about high dimensional problems?](pic7.png)
+![For low dimensional problems, their performances are almost the same (e.g., Diabetes data). How about high dimensional problems?](picture/pic7.png)
 
 
 
 
 -------------------------------------------
 
-![Lasso for Leukemia data: copy from Prof. Hastie’s talk](pic8.png)
+![Lasso for Leukemia data: copy from Prof. Hastie’s talk](picture/pic8.png)
 
 -------------------------------------------
 
-![LAR for Leukemia data: copy from Prof. Hastie’s talk](pic9.png)
-
-
--------------------------------------------
-
-![Lasso for Leukemia data: copy from Prof. Hastie’s talk](pic10.png)
+![LAR for Leukemia data: copy from Prof. Hastie’s talk](picture/pic9.png)
 
 
 -------------------------------------------
 
-![LAR for Leukemia data: copy from Prof. Hastie’s talk](pic11.png)
+![Lasso for Leukemia data: copy from Prof. Hastie’s talk](picture/pic10.png)
 
 
 -------------------------------------------
 
-![Boosting for Leukemia data: copy from Prof. Hastie’s talk](pic12.png)
+![LAR for Leukemia data: copy from Prof. Hastie’s talk](picture/pic11.png)
+
+
+-------------------------------------------
+
+![Boosting for Leukemia data: copy from Prof. Hastie’s talk](picture/pic12.png)
 
 
 ## Comments
@@ -431,7 +428,7 @@ as well, and solved by convex optimization.
 ## Incorporate disease models into Boosting
 
 \begin{figure}
- \includegraphics[width=300pt, height = 100pt]{pic13.png}
+ \includegraphics[width=300pt, height = 100pt]{picture/pic13.png}
  \caption{Figure: epistasis models}
 \end{figure}
 
@@ -454,7 +451,7 @@ Take the place of CART by epistasis models.
 
 ## A simple experiments 
 
-![](pic14.png)
+![](picture/pic14.png)
 
 
 
@@ -465,8 +462,7 @@ Take the place of CART by epistasis models.
 * \textcolor{blue}{\footnotesize David M. Evans etal, Two-Stage Two-Locus Models in Genome-Wide
 Association. PLOS Genetics. 2006, Sep.}
 
-Strongly recommended references on Lasso, LAR and
-Boosting:
+Strongly recommended references on Lasso, LAR and Boosting:
 
 * \textcolor{blue}{\footnotesize R. Tibshirani. Regression Shrinkage and Selection via the Lasso. Journal of the Royal Statistical Society, Series B-Methodological, vol.58 no.1, pp.267-288, 1996.}
 
@@ -474,5 +470,6 @@ Boosting:
 
 * \textcolor{blue}{\footnotesize J. Friedman. Greedy Function Approximation: A Gradient Boosting Machine. The Annals of Statistics, vol. 29, no. 5, pp. 1189-1232, 2001.}
 
-* \textcolor{blue}{\footnotesize B. Efron. Least Angle Regression. Annals of Statistics vol.32, no.2, pp. 407ı499, 2004.}，
+* \textcolor{blue}{\footnotesize B. Efron. Least Angle Regression. Annals of Statistics vol.32, no.2, pp. 407ı499, 2004.}
+
 * \textcolor{blue}{\footnotesize T. Hastie. The Elements of statistical learning, (2nd), 2009.}
